@@ -10,6 +10,12 @@ html {
 
 body {
     background-color: #fefefe; /* optional, header color */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 1rem;
 }
 
 header img {
@@ -80,16 +86,31 @@ h3 {
     font-size: 1.25rem;
 }
 
+footer {
+    background-color: burlywood;
+    padding: 0;
+    margin: 0;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
 @media screen and (min-width: 450px) {
     .meal-inFood_plan {
         grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
+        gap: 1.5rem;
     }
 }
 
 @media screen and (min-width: 1080px) {
     .meal-inFood_plan {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 0.5rem;
+        gap: 3rem;
+    }
+    main {
+        width: 85%;
+        margin: 0 auto;
     }
 }
