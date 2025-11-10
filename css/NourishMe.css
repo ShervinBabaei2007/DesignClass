@@ -1,17 +1,26 @@
-/* body {
-    margin: 0;
-    padding: 0;
-} */
-
 html {
     font-family: sans-serif;
     font-size: 1.2rem;
 }
 
+h1,
+h2,
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Verdana, sans-serif;
+}
+
 body {
-    background-color: #fefefe; /* optional, header color */
+    background-color: #fefefe; /* optioal, header color (don't know if want to keep or remove) */
+    color: black;
     margin: 0;
     padding: 0;
+
+    text-align: left;
+    line-height: 1.5;
 }
 
 main {
@@ -36,18 +45,20 @@ nav {
 }
 
 .navbar-section {
-    background-color: blue;
+    background-color: cornsilk;
 }
 
 .make-inline {
     display: inline-block;
 }
+
 .make-block {
     display: block;
 }
 
 .main-logo {
     margin: 0 auto;
+    padding-top: 1rem;
 }
 
 .nav-button-section {
@@ -58,10 +69,21 @@ nav {
 
 .nav-button {
     color: white;
-    background-color: brown;
+    background-color: seagreen;
     text-decoration: none;
     text-align: center;
     padding: 0.5rem 1rem;
+}
+
+.nav-button:hover {
+    background-color: rgb(44, 93, 44);
+    transform: scale(1.08);
+    width: 80%;
+    font-weight: bold;
+    margin-left: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgb(122, 37, 0);
+    transition: all ease-in 0.5s;
 }
 
 .screenshot {
@@ -79,11 +101,11 @@ nav {
 h2 {
     display: block;
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 }
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 }
 
 footer {
@@ -95,20 +117,44 @@ footer {
 footer p {
     padding: 0;
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer {
+    text-align: center;
+}
+
+.first {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+.about-app {
+    margin-top: 3rem;
+}
+
+.second {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 450px) {
     .meal-inFood_plan {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+        margin-bottom: 1rem;
     }
+
 }
 
 @media screen and (min-width: 1080px) {
     .meal-inFood_plan {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3rem;
+        margin-bottom: 1rem;
     }
+
     main {
         width: 85%;
         margin: 0 auto;
