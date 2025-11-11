@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>NourishMe: Your Senior Nutrition Companion</title>
         <link rel="stylesheet" href="../css/NourishMe.css" />
+        <script src="../script.js" defer></script>
     </head>
     <body>
         <header>
@@ -25,20 +26,63 @@
         </header>
 
         <main>
-            <section>
-                <h2 class="first">Quick, Healthy, Delicous, meals delivered to your door</h2>
-                <h3>Some Samples Below:</h3>
+            <section class="hero-section">
+                <div>
+                    <h2 class="first">Quick, Healthy, Delicous, meals delivered to your door</h2>
+                    <a href="#ordernow">Order Now</a>
+                    <a href="/mobile/meals.html">See Meal Options</a>
+                </div>
+                <div>
+                    <img class="hero-img" src="/image2/hero-food-img.jpg" alt="example of our meals" />
+                </div>
+            </section>
+
+            <section id="ordernow">
+                <section class="part1">
+                    <h3>1. tell us your dietary needs</h3>
+
+                    <div class="diet-options">
+                        <label class="option">Mostly Meat</label>
+                        <label class="option">Family Friendly</label>
+                        <label class="option">Carb Smart</label>
+                        <label class="option">Calorie Smart</label>
+                        <label class="option">Vegetarian</label>
+                        <label class="option">Quick & Easy</label>
+                        <label class="option">Pescatarian</label>
+                        <label class="option">High Protein</label>
+                    </div>
+
+                    <section class="part2">
+                        <h3>2. Select the duration of your mealplan</h3>
+                        <label class="option1">
+                            <input type="radio" name="duration" />
+                            <span>1 Day</span>
+                        </label>
+                        <label class="option1">
+                            <input type="radio" name="duration" />
+                            <span>3 Days</span>
+                        </label>
+                        <label class="option1">
+                            <input type="radio" name="duration" />
+                            <span>1 Week</span>
+                        </label>
+                        <label class="option1">
+                            <input type="radio" name="duration" />
+                            <span>2 Weeks</span>
+                        </label>
+                        <label class="option1">
+                            <input type="radio" name="duration" />
+                            <span>1 Month</span>
+                        </label>
+                    </section>
+                </section>
+
+                <h3>3. Some Samples Food Choices Below:</h3>
 
                 <div class="meal-inFood_plan" id="meals">
                     <div class="second">
                         <h3>Breakfast</h3>
                         <img class="screenshot" src="../image/breakfastphoto.png" alt="Pesto, Egg, & Potato Skillet" />
-                        <p>
-                            This pesto, egg and potato skillet is a flavorful meal made with just five ingredients
-                            thanks to a generous spoonful of pesto, which adds an herby richness. The eggs can easily be
-                            cooked to your liking. If you prefer the yolks cooked through, add a few extra minutes to
-                            the cook time in Step 3. Garnish with basil, if desired.
-                        </p>
                     </div>
 
                     <div class="second">
@@ -48,12 +92,6 @@
                             src="../image/lunchphoto.png"
                             alt="high-protein peanut butter baked oats with jelly"
                         />
-                        <p>
-                            These high-protein peanut butter baked oats with jelly are a delicious mash-up that combines
-                            the nostalgic flavors of peanut butter and jelly with the hearty texture of baked oats.
-                            Packed with protein from peanut butter, Greek-style yogurt and eggs, these baked oats will
-                            help keep you full and energized throughout the morning.
-                        </p>
                     </div>
 
                     <div class="second">
@@ -63,12 +101,6 @@
                             src="../image/dinnerphoto.png"
                             alt="veggies and smoked salmon together with the cream cheese"
                         />
-                        <p>
-                            Chopping the veggies and smoked salmon together with the cream cheese allows for an even
-                            distribution of ingredients, ensuring the perfect bite every time. We like the flavor and
-                            fiber that a whole-grain everything bagel adds, but any kind of bagel works well here. For a
-                            fun twist, use a flavored cream cheese.
-                        </p>
                     </div>
 
                     <div class="second">
@@ -78,12 +110,6 @@
                             src="../image/morningsnack.png"
                             alt="creamy raspberry-peach chia seed smoothie"
                         />
-                        <p>
-                            This creamy raspberry-peach chia seed smoothie is the best way to start your day or recharge
-                            in the afternoon. Chia seeds add fiber to keep you full and satisfied. The natural sweetness
-                            of frozen peaches combined with dates and the tangy brightness of raspberries make every sip
-                            refreshing and satisfying.
-                        </p>
                     </div>
 
                     <div class="second">
@@ -93,12 +119,6 @@
                             src="../image/afternoonsnack.png"
                             alt="cottage cheese bowl with capers, dill and a soft-cooked egg"
                         />
-                        <p>
-                            This cottage cheese bowl with capers, dill and a soft-cooked egg is the ultimate
-                            high-protein meal. This bowl will keep you going strong throughout the morning, while an egg
-                            adds richness and even more staying power. Pulled together in only 20 minutes, this
-                            breakfast is the perfect choice for starting your day off right.
-                        </p>
                     </div>
 
                     <div class="second">
@@ -108,12 +128,6 @@
                             src="../image/nightsnack.png"
                             alt="quick egg scramble with hearty bread"
                         />
-                        <p>
-                            This quick egg scramble with hearty bread is one of the best breakfasts for weight loss. It
-                            combines protein-packed eggs and superfood raspberries with filling whole-grain toast and
-                            nutrient-rich spinach. The protein and fiber help fill you up and keep you going through the
-                            morning.
-                        </p>
                     </div>
                 </div>
             </section>

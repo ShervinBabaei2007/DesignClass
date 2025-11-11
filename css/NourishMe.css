@@ -3,11 +3,14 @@ html {
     font-size: 1.25rem; /* larger base font for readability */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-p, li {
+p,
+li {
     font-family: Verdana, sans-serif;
     line-height: 1.6;
 }
@@ -22,6 +25,11 @@ body {
 
 main {
     margin: 1rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 /* Logo inside header */
@@ -83,7 +91,7 @@ nav {
 .nav-button:focus {
     background-color: #2e874e;
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Meal card images */
@@ -139,6 +147,190 @@ footer p {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.hero-img {
+    margin: 0;
+    padding: 0;
+    height: 60vh;
+    width: auto;
+
+    /* width: 100%; */
+    /* width:auto; */
+}
+/* === Dietary Needs Section === */
+#ordernow {
+    margin: 40px auto;
+    max-width: 1700px;
+}
+
+.part1 h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* === Dietary Options Section === */
+.diet-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.option {
+    background-color: #f4ede3;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: rgb(235, 228, 228);
+}
+
+.option1:hover {
+    background-color: rgb(235, 228, 228);
+}
+
+/* Green highlight when selected */
+.option.selected {
+    background-color: #c5f87b;
+}
+
+/* Create circular checkmark indicator */
+.option.selected::after {
+    content: '✓';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* second part - elderly-friendly version */
+.part2 {
+    margin-top: 40px;
+}
+
+.part2 h3 {
+    font-size: 24px; /* slightly larger */
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.option1 {
+    background-color: #f4ede3;
+    /* padding: 25px 30px;  */
+    border-radius: 16px;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 20px; /* larger text */
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    /* margin-right: 16px; */
+    min-width: 120px; /* optional: makes buttons more uniform */
+    text-align: center;
+}
+
+/* Hide the radio input */
+.option1 input[type='radio'] {
+    display: none;
+}
+
+/* When checked, make label background green and text white */
+.option1 input[type='radio']:checked + span {
+    min-width: 120px;
+    padding: 1rem;
+    background-color: #c5f87b;
+    color: black;
+    border-radius: 16px;
+    /* padding: 25px 30px; */
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Make the span inside label behave like the label */
+.option1 span {
+    display: inline-block;
+}
+
+
+
+.meal-inFood_plan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.second {
+  background: white;
+  border: 5px solid transparent;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.second img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.second h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.second.selected {
+  border-color: #a2f078; /* bright green border */
+  box-shadow: 0 0 10px #a2f078;
+  position: relative;
+}
+
+/* Add circular checkmark in corner */
+.second.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #a2f078;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Small screens and up */
 @media screen and (min-width: 450px) {
