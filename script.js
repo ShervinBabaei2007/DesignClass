@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Also toggle the checkbox state (optional, for logic)
             const checkbox = this.querySelector('input');
-            checkbox.checked = !checkbox.checked;
+            if (checkbox) checkbox.checked = !checkbox.checked;
         });
     });
 });
@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Count how many are selected
             const selectedCount = document.querySelectorAll('.second.selected').length;
-            counter.innerHTML = `you have selected <strong>${selectedCount}</strong> meal types per day`;
+            counter.innerHTML = `you have selected <strong>${selectedCount}</strong> meal type${
+                selectedCount !== 1 ? 's' : ''
+            } per day`;
         });
     });
 });
