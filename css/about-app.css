@@ -1,0 +1,126 @@
+/* Reset and basic layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fffdf5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.navbar-section {
+    background-color: #fef4d4;
+    border-bottom: 2px solid #d3b67f;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.make-block {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+/* Navigation button */
+nav {
+    margin-top: 0.8rem;
+}
+
+nav .returnToHome {
+    color: white;
+    background-color: #3fa064;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    font-weight: bold;
+    min-width: 140px;
+    font-size: 1.3rem;
+    transition: 0.2s ease;
+}
+
+nav .returnToHome:hover,
+nav .returnToHome:focus {
+    background-color: #2e874e;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Main content */
+main {
+    margin: 1.5rem;
+}
+
+.color {
+    background-color: #fef8e7; /* light beige */
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+/* Headings */
+h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs and lists */
+p,
+ul {
+    font-size: 1.25rem;
+    overflow-wrap: break-word;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Highlight important text */
+.highlight {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+}
+
+/* Footer */
+footer {
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    padding: 1rem 0;
+    background-color: #fef4d4;
+    border-top: 2px solid #d3b67f;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.highlight {
+    margin-top: 5rem;
+}
+
+/* Responsive tweak */
+@media screen and (min-width: 768px) {
+    .color {
+        padding: 3rem;
+    }
+
+    nav .returnToHome {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+}

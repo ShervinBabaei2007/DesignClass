@@ -1,53 +1,57 @@
 html {
     font-family: sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.25rem; /* larger base font for readability */
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-p {
+p, li {
     font-family: Verdana, sans-serif;
+    line-height: 1.6;
 }
 
 body {
-    background-color: #fefefe; /* optioal, header color (don't know if want to keep or remove) */
-    color: black;
+    background-color: #fafafa;
+    color: #111;
     margin: 0;
     padding: 0;
-
     text-align: left;
-    line-height: 1.5;
 }
 
 main {
     margin: 1rem;
 }
 
+/* Logo inside header */
 header img {
-    width: 350px;
+    width: 120px;
+    display: block;
+    margin: 0.5rem auto;
 }
 
 header h1 {
     text-align: center;
+    font-size: 2rem;
 }
 
-header img {
-    width: 100px;
-}
-
+/* NAVIGATION */
 nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: #2a804c; /* strong contrast band */
+    padding: 0.8rem;
 }
 
 .navbar-section {
-    background-color: cornsilk;
+    background-color: #fef4d4;
+    border-bottom: 4px solid #d3b67f;
 }
 
+/* Utility classes */
 .make-inline {
     display: inline-block;
 }
@@ -61,71 +65,68 @@ nav {
     padding-top: 1rem;
 }
 
-.nav-button-section {
-    background-color: pink;
-    width: 100%;
-    margin: 0 auto;
-}
-
+/* NAV BUTTONS */
 .nav-button {
     color: white;
-    background-color: seagreen;
+    background-color: #3fa064;
     text-decoration: none;
     text-align: center;
-    padding: 0.5rem 1rem;
-}
-
-.nav-button:hover {
-    background-color: rgb(44, 93, 44);
-    transform: scale(1.08);
-    width: 80%;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
     font-weight: bold;
-    margin-left: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    border: 2px solid rgb(122, 37, 0);
-    transition: all ease-in 0.5s;
+    min-width: 120px; /* bigger click area */
+    font-size: 1.2rem;
+    transition: 0.2s ease;
 }
 
+.nav-button:hover,
+.nav-button:focus {
+    background-color: #2e874e;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Meal card images */
 .screenshot {
-    /* width: 400px; */
     display: block;
     height: auto;
     max-width: 100%;
+    border-radius: 10px;
 }
 
+/* Meal cards layout */
 .meal-inFood_plan {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
 h2 {
     display: block;
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
 }
 
 h3 {
     font-size: 1.4rem;
+    margin-bottom: 0.4rem;
 }
 
+/* Footer */
 footer {
     background-color: burlywood;
-    padding: 0;
-    margin: 0;
+    text-align: center;
+    padding: 0.8rem 0;
 }
 
 footer p {
-    padding: 0;
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-footer {
-    text-align: center;
-}
-
+/* Headings in body */
 .first {
-    font-family: Arial, Helvetica, sans-serif;
     margin-top: 3rem;
     margin-bottom: 0;
 }
@@ -139,6 +140,7 @@ footer {
     margin-bottom: 1rem;
 }
 
+/* Small screens and up */
 @media screen and (min-width: 450px) {
     .meal-inFood_plan {
         grid-template-columns: 1fr 1fr;
@@ -146,17 +148,25 @@ footer {
         margin-bottom: 1rem;
     }
 
+    nav {
+        gap: 0.8rem;
+    }
 }
 
+/* Desktop */
 @media screen and (min-width: 1080px) {
     .meal-inFood_plan {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3rem;
-        margin-bottom: 1rem;
     }
 
     main {
         width: 85%;
         margin: 0 auto;
+    }
+
+    .nav-button {
+        font-size: 1.3rem;
+        padding: 1rem 1.8rem;
     }
 }
