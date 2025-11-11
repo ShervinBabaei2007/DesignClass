@@ -227,7 +227,7 @@ footer p {
 }
 
 .part2 h3 {
-    font-size: 24px; 
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 16px;
 }
@@ -385,6 +385,30 @@ footer p {
 .ordernow-style,
 .seeMealOption {
     margin-top: 1rem;
+}
+
+.confirmGoCart {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    transition: background 0.5s, color 0.5s;
+    margin: 0.625rem 0.313rem;
+    min-width: 11.25rem;
+
+    background-color: #ffb300;
+    color: black;
+    border: 0.125rem solid black;
+    margin-top: 1rem;
+}
+
+.confirmGoCart:hover {
+    transform: scale(1.11);
+    background-color: rgb(21, 146, 75);
+    transition: all 0.75s ease;
 }
 
 /* Small screens and up */

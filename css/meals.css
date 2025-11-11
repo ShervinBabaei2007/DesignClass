@@ -1,0 +1,175 @@
+/* Reseting the base layout*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fffdf5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.navbar-section {
+    background-color: #fef4d4;
+    border-bottom: 2px solid #d3b67f;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.make-block {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: #2a804c;
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.nav-button {
+    color: white;
+    background-color: #3fa064;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+    transition: 0.5s ease;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+    background-color: #2e874e;
+    transform: scale(1.07);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Main content */
+main {
+    margin: 1.5rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+    max-width: 1800px;
+    gap: 2rem;
+}
+
+/* Section headings */
+h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #2a804c;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+/* Meals Grid */
+.meal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Meal Cards */
+.meal-card {
+    background-color: #fef8e7;
+    border: 2px solid #d3b67f;
+    border-radius: 12px;
+    padding: 1.4rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    gap: 0.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Image alignment */
+.meal-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1rem 0;
+    justify-self: center;
+}
+
+/* Text alignment */
+.meal-card h3,
+.meal-card h4,
+.meal-card p {
+    text-align: left;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    overflow-wrap: break-word;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #fef4d4;
+    border-top: 2px solid #d3b67f;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsive tweak */
+@media screen and (min-width: 768px) {
+    .nav-button {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    .meal-card {
+        padding: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .meal-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle the 'selected' class for styling
             this.classList.toggle('selected');
 
-            // Also toggle the checkbox state (optional, for logic)
+            //toggle the checkbox state
             const checkbox = this.querySelector('input');
             if (checkbox) checkbox.checked = !checkbox.checked;
         });
     });
 });
 
-
+// CREDIT: ChatGPT
 // Select duration of your mealplan
 document.addEventListener('DOMContentLoaded', () => {
     const options = document.querySelectorAll('.option1');
@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// some Sample food CHoices below, you can choose
+// CREDIT: ChatGPT
+// some Sample food Choices below, you can choose
 document.addEventListener('DOMContentLoaded', () => {
     const meals = document.querySelectorAll('.second');
     const counter = document.getElementById('meal-count');
