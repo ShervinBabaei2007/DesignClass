@@ -211,7 +211,7 @@ footer p {
     transform: translateY(-50%);
     background-color: #333;
     color: white;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 50%;
     width: 18px;
@@ -221,13 +221,13 @@ footer p {
     justify-content: center;
 }
 
-/* second part - elderly-friendly version */
+/* second part */
 .part2 {
     margin-top: 40px;
 }
 
 .part2 h3 {
-    font-size: 24px; /* slightly larger */
+    font-size: 24px; 
     font-weight: bold;
     margin-bottom: 16px;
 }
@@ -237,32 +237,42 @@ footer p {
     border-radius: 16px;
     padding: 1rem;
     font-weight: bold;
-    font-size: 20px; /* larger text */
+    font-size: 20px;
     cursor: pointer;
     user-select: none;
     display: inline-block;
-    min-width: 120px; /* optional: makes buttons more uniform */
+    min-width: 120px;
     text-align: center;
+    position: relative; /* needed for ::after */
+    margin: 5px;
+    transition: all 0.5s ease;
 }
 
-/* Hide the radio input */
+.option1.selected {
+    background-color: #c5f87b;
+}
+
+.option1.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #2a7601;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .option1 input[type='radio'] {
     display: none;
 }
 
-/* When checked, make label background green and text white */
-.option1 input[type='radio']:checked + span {
-    min-width: 120px;
-    padding: 1rem;
-    background-color: #c5f87b;
-    color: black;
-    border-radius: 16px;
-    display: inline-block;
-    font-size: 20px;
-    text-align: center;
-}
-
-/* Make the span inside label behave like the label */
 .option1 span {
     display: inline-block;
 }
@@ -310,10 +320,10 @@ footer p {
     position: absolute;
     top: 8px;
     right: 8px;
-    background-color: #a2f078;
+    background-color: #2d8100;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -398,7 +408,6 @@ footer p {
         margin: 0 auto;
     }
 }
-
 
 /* Desktop */
 @media screen and (min-width: 1080px) {

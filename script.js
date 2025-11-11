@@ -1,3 +1,4 @@
+// For tell us about your dietary needs
 // Wait until the page is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const options = document.querySelectorAll('.option');
@@ -15,7 +16,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Select duration of your mealplan
+document.addEventListener('DOMContentLoaded', () => {
+    const options = document.querySelectorAll('.option1');
+    const counter = document.getElementById('meal-count2');
 
+    options.forEach(option => {
+        const input = option.querySelector('input[type="radio"]');
+
+        option.addEventListener('click', e => {
+            e.preventDefault(); // prevent native radio behavior
+
+            if (option.classList.contains('selected')) {
+                // Deselect if already selected
+                option.classList.remove('selected');
+                input.checked = false;
+                counter.innerHTML = 'No selection';
+            } else {
+
+                // Deselect all first
+                options.forEach(o => {
+                    o.classList.remove('selected');
+                    o.querySelector('input[type="radio"]').checked = false;
+                });
+
+                // Select clicked
+                option.classList.add('selected');
+                input.checked = true;
+                counter.innerHTML = `You have selected <strong>${option.querySelector('span').textContent}</strong>`;
+            }
+        });
+    });
+});
+
+
+// some Sample food CHoices below, you can choose
 document.addEventListener('DOMContentLoaded', () => {
     const meals = document.querySelectorAll('.second');
     const counter = document.getElementById('meal-count');
