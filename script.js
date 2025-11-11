@@ -1,3 +1,4 @@
+// Did my self
 // For tell us about your dietary needs
 // Wait until the page is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
