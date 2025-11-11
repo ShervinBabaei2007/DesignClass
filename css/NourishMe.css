@@ -155,14 +155,10 @@ footer p {
 }
 
 .hero-img {
-    margin: 0;
-    padding: 0;
-    height: 60vh;
-    width: auto;
-
-    /* width: 100%; */
-    /* width:auto; */
+    max-width: 100%;
+    height: auto;
 }
+
 /* === Dietary Needs Section === */
 #ordernow {
     margin: 40px auto;
@@ -238,7 +234,6 @@ footer p {
 
 .option1 {
     background-color: #f4ede3;
-    /* padding: 25px 30px;  */
     border-radius: 16px;
     padding: 1rem;
     font-weight: bold;
@@ -246,7 +241,6 @@ footer p {
     cursor: pointer;
     user-select: none;
     display: inline-block;
-    /* margin-right: 16px; */
     min-width: 120px; /* optional: makes buttons more uniform */
     text-align: center;
 }
@@ -263,7 +257,6 @@ footer p {
     background-color: #c5f87b;
     color: black;
     border-radius: 16px;
-    /* padding: 25px 30px; */
     display: inline-block;
     font-size: 20px;
     text-align: center;
@@ -361,8 +354,8 @@ footer p {
 }
 
 .ordernow-style:hover {
-    transform: scale(1.07);
-    background-color: #ff8000;
+    transform: scale(1.11);
+    background-color: #ffaa00;
     color: black;
 }
 
@@ -374,13 +367,18 @@ footer p {
 }
 
 .seeMealOption:hover {
-    transform: scale(1.07);
+    transform: scale(1.11);
     background-color: rgb(21, 146, 75);
     border-color: 0.125rem solid black;
 }
 
+.ordernow-style,
+.seeMealOption {
+    margin-top: 1rem;
+}
+
 /* Small screens and up */
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 300px) {
     .meal-inFood_plan {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
@@ -390,7 +388,17 @@ footer p {
     nav {
         gap: 0.8rem;
     }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-img {
+        margin: 0 auto;
+    }
 }
+
 
 /* Desktop */
 @media screen and (min-width: 1080px) {

@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const meals = document.querySelectorAll('.second');
     const counter = document.getElementById('meal-count');
